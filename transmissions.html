@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transmissions - Fiona Guillemant</title>
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <style>
+        /* Style basique pour la mise en page et la galerie d'images */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item {
+            flex-basis: calc(33.333% - 20px);
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-item {
+                flex-basis: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-item {
+                flex-basis: 100%;
+            }
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2><i>Transmissions</i></h2>
+            <p>Série de dessins sur ce qu’on reçoit, ou non, de notre ascendance, des traces qu’elle laisse en héritage. Comme les questions jamais posées à une grand-mère disparue, ou la recette de cuisine d’une tante dont seules nous restent en mémoire les saveurs particulières. Ou encore, l’arbre généalogique d’une lignée divisée autour de la question des terres.</p>
+            <p>Arbre cadastral <i>sélectionné pour être exposé dans l'exposition de groupe</i> Hosting<i>, Centrale for contemporary art – Bruxelles, BE (2024-2025)</i> </p>
+            <p><i>Montré dans le cadre de TRANS-, Laboratoire de l’Image Possible de la Biennale de l'Image Possible (BIP) au Centre culturel Les Chiroux – Liège, BE (2022)</i></p>
+        </section>
+
+        <section class="gallery container">
+            <div class="gallery-item">
+                <a href="images/Arbre_cadastral.jpg" data-lightbox="image-1" data-title="Arbre cadastral">
+                    <img src="images/Arbre_cadastral.jpg" alt="Arbre cadastral">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="images/La_Tarte_aux_Pommes.jpg" data-lightbox="image-2" data-title="La Tarte aux Pommes">
+                    <img src="images/La_Tarte_aux_Pommes.jpg" alt="La Tarte aux Pommes">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="images/Lettre_a_Suzanne.jpg" data-lightbox="image-3" data-title="Lettre à Suzanne">
+                    <img src="images/Lettre_a_Suzanne.jpg" alt="Lettre à Suzanne">
+                </a>
+                </div>
+            <!-- Ajoutez plus d'images si nécessaire -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Fiona Guillemant. Tous droits réservés.</p>
+    </footer>
+
+</body>
+
+</html>
