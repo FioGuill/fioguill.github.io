@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbarium - Fiona Guillemant</title>
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <style>
+        /* Style basique pour la mise en page et la galerie d'images */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item {
+            flex-basis: calc(33.333% - 20px);
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-item {
+                flex-basis: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-item {
+                flex-basis: 100%;
+            }
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2><i>Herbarium</i></h2>
+            <p>Ces dessins sont basés sur « le plus grand herbier du monde » : celui du Muséum national d’Histoire naturelle. Ils questionnent notre perception du vivant, ainsi que nos modes de conservation.
+                Issus d’espèces menacées ou éteintes, les végétaux représentés ont été prélevés dans d’anciennes colonies. Les pages sont affranchies des codes d’identification, découpés. Les couleurs qui apparaissent
+                au travers renvoient aux légendes, actuelles cette fois, utilisées par l’Union internationale pour la conservation de la nature.
+                Son code couleur classe les espèces, de non menacée (vert) à éteinte (noir).</p>
+            <p><i>Montré dans le cadre du Parcours d'Artistes d'Etterbeek au sein de la Bilbiothèque Hergé – Bruxelles, BE (2024)</i></p>
+        </section>
+
+        <section class="gallery container">
+            <div class="gallery-item">
+                <a href="images/Ipomoea_sagittata_Syrie.jpg" data-lightbox="image-2" data-title="Ipomoea Sagittata, Syrie, 1934">
+                    <img src="images/Ipomoea_sagittata_Syrie.jpg" alt="Ipomoea Sagittata, Syrie, 1934">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="images/Herbarium-Fiona_Guillemant-Copyright_Ingrid_Buffetaut.jpg" data-lightbox="image-1" data-title="Vue de l'expo (Dé)compositions, salon HairbyMaxim, 2023-2024, copyright : Ingrid Buffetaut">
+                    <img src="images/Herbarium-Fiona_Guillemant-Copyright_Ingrid_Buffetaut.jpg" alt="Vue de l'expo (Dé)compositions, salon HairbyMaxim, 2023-2024, copyright : Ingrid Buffetaut">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="images/Psychotria_antennae_formis_Guyane-Fiona_Guillemant.jpg" data-lightbox="image-3" data-title="Psychotria Antennae Formis, Guyane, 1971">
+                    <img src="images/Psychotria_antennae_formis_Guyane-Fiona_Guillemant.jpg" alt="Psychotria Antennae Formis, Guyane, 1971">
+                </a>
+                </div>
+            <div class="gallery-item">
+                 <a href="images/Herbarium-Fiona_Guillemant.jpg" data-lightbox="image-3" data-title="Nymphaea Caerulea Savigny">
+                     <img src="images/Herbarium-Fiona_Guillemant.jpg" alt="Nymphaea Caerulea Savigny, collections du MNHN">
+                 </a>
+                  </div>
+              <div class="gallery-item">
+                    <a href="images/Herbarium-Fiona_Guillemant-Peperomia pedunculata-la-reunion_1866-Bibliotheque_Herge.jpg" data-lightbox="image-3" data-title="Peperomia Pedunculata, La Réunion, 1866">
+                        <img src="images/Herbarium-Fiona_Guillemant-Peperomia pedunculata-la-reunion_1866-Bibliotheque_Herge.jpg" alt="Peperomia Pedunculata, La Réunion, 1866">
+                    </a>
+                     </div>
+               <div class="gallery-item">
+                    <a href="images/Herbarium-Fiona_Guillemant-Juncus fontanesii-Maroc-EN-1941-Bibliotheque_Herge.jpg" data-lightbox="image-3" data-title="Juncus Fontanesii, Maroc, 1941">
+                        <img src="images/Herbarium-Fiona_Guillemant-Juncus fontanesii-Maroc-EN-1941-Bibliotheque_Herge.jpg" alt="Juncus Fontanesii, Maroc, 1941">
+                   </a>
+                    </div>
+            <article class="col-6 col-12-xsmall work-item">
+                <div class="gallery-item">
+                 <a href="images/Herbarium-Fiona_Guillemant-Bibliotheque_Herge.jpg" data-lightbox="image-3" data-title="Vue de l'accrochage à la Bibliothèque Hergé, Parcours d'Artistes 2024">
+                     <img src="images/Herbarium-Fiona_Guillemant-Bibliotheque_Herge.jpg" alt="Vue de l'accrochage à la Bibliothèque Hergé, Parcours d'Artistes 2024">
+                </a>
+                </div>
+            </article>
+            <!-- Ajoutez plus d'images si nécessaire -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Fiona Guillemant. Tous droits réservés.</p>
+    </footer>
+
+</body>
+
+</html>
