@@ -82,6 +82,9 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
+	.normal-text {
+		font-weight: normal;}
+
 	body {
 		background: #fff;
 	}
@@ -99,10 +102,10 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: #a2a2a2;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 16pt;
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		font-size: 16px;
 		font-weight: 400;
-		line-height: 1.75em;
+		line-height: 1.2em;
 	}
 
 	a {
@@ -111,13 +114,13 @@ input, select, textarea {
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #49bf9d;
+		color: #a6a5a5;
 		text-decoration: none;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #49bf9d !important;
+			color: #fffc61 !important;
 			text-decoration: none;
 		}
 
@@ -157,7 +160,7 @@ input, select, textarea {
 	}
 
 	h3 {
-		font-size: 1.25em;
+		font-size: 1em;
 		line-height: 1.5em;
 	}
 
@@ -169,7 +172,7 @@ input, select, textarea {
 	h5 {
 		font-size: 0.9em;
 		line-height: 1.5em;
-	}
+		font-weight: initial !important;}
 
 	h6 {
 		font-size: 0.7em;
@@ -197,7 +200,7 @@ input, select, textarea {
 		hr.major {
 			margin: 3em 0;
 		}
-
+		
 	blockquote {
 		border-left: solid 6px #efefef;
 		font-style: italic;
@@ -243,74 +246,52 @@ input, select, textarea {
 
 /* Container */
 
-	.container {
-		margin: 0 auto;
-		max-width: calc(100% - 4em);
-		width: 100%;
-		display: flex;            /* Utiliser flexbox */
-		justify-content: center;  /* Centre le contenu horizontalement */
-		flex-wrap: wrap;         /* Permet au contenu de s'enrouler si nécessaire */
-	}
-
-		.container.xsmall {
-			width: 25%;
-		}
-
-		.container.small {
-			width: 50%;
-		}
-
-		.container.medium {
-			width: 75%;
-		}
-
-		.container.large {
-			width: 125%;
-		}
-
-		.container.xlarge {
-			width: 150%;
-		}
-
-		.container.max {
-			width: 100%;
-		}
-/* Ajustements pour les éléments d'articles */
-		.work-item {
-  			flex: 1 1 auto; /* Permet aux articles de s'adapter à la largeur */
-    		margin: 1em;    /* Ajoute de l'espace autour des articles */
-			box-sizing: border-box;    /* Inclut padding et border dans la largeur totale */
-			text-align: left;        /* Centre le texte dans chaque article */
-		}
-
-		/* Images */
-		.image img {
-    		max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de son conteneur */
-    		height: auto;    /* Maintient les proportions de l'image */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    grid-auto-rows: min-content;
+    grid-auto-flow: dense; /* Force les éléments à remplir les espaces libres */
 }
 
-		@media screen and (max-width: 980px) {
 
-			.container {
-				width: 100% !important;
-				max-width: 100% !important;
-				display: flex;            /* Utiliser flexbox */
-				justify-content: center;  /* Centre le contenu horizontalement */
-				flex-wrap: wrap;         /* Permet au contenu de s'enrouler si nécessaire */
-			}
+/* Classes de taille inutiles pour la grille */
+.container.xsmall,
+.container.small,
+.container.medium,
+.container.large,
+.container.xlarge,
+.container.max {
+    width: 100%; /* Assurez que la largeur reste au maximum */
+}
 
-		}
+/* Ajustements pour les éléments d'articles */
+.work-item {
+    /* Laissez cette règle pour ajouter de l'espace autour des articles */
+    margin: 0; /* Désactiver margin inutile avec la grille */
+    text-align: left; /* Centre le texte dans chaque article */
+    box-sizing: border-box; /* Inclut padding et border dans la largeur totale */
+}
 
-		@media screen and (max-width: 480px) {
+/* Images */
+.image img {
+    max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de son conteneur */
+    height: auto;    /* Maintient les proportions de l'image */
+}
 
-			.container {
-				max-width: calc(100% - 3em);
-				display: flex;            /* Utiliser flexbox */
-				justify-content: center;  /* Centre le contenu horizontalement */
-				flex-wrap: wrap;         /* Permet au contenu de s'enrouler si nécessaire */
-			}
+/* Media queries */
+@media screen and (max-width: 980px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Plus petites colonnes sur écran réduit */
+    }
+}
 
-		}
+@media screen and (max-width: 480px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Ajustement encore plus serré pour mobile */
+    }
+}
+
 
 
 /* Row */
@@ -1788,7 +1769,7 @@ input, select, textarea {
 	}
 
 	header p {
-		color: #b2b2b2;
+		color: #ffffff;
 		position: relative;
 		margin: 0 0 1.5em 0;
 	}
@@ -2095,7 +2076,7 @@ input, select, textarea {
 			-ms-transition: opacity 0.2s ease-in-out;
 			transition: opacity 0.2s ease-in-out;
 			border-radius: 0.35em;
-			border: solid 3px rgba(255, 255, 255, 0.5);
+			border: solid 3px rgba(255, 255, 255, 0);
 			color: #fff;
 			display: inline-block;
 			font-size: 0.8em;
@@ -2176,6 +2157,53 @@ input, select, textarea {
 				border-radius: 100%;
 				width: 100%;
 			}
+
+/* Styles pour masquer la modal par défaut */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Afficher la modal lorsque le lien est ciblé */
+:target {
+    display: flex;
+}
+
+/* Contenu de la modal */
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    text-align: center;
+}
+
+/* Image dans la modal */
+.modal-content img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Bouton pour fermer */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    background: none;
+}
+
 
 /* List */
 
@@ -2427,11 +2455,11 @@ input, select, textarea {
 		}
 
 		table thead {
-			border-bottom: solid 2px #efefef;
+			border-bottom: solid 2px #ffffff;
 		}
 
 		table tfoot {
-			border-top: solid 2px #efefef;
+			border-top: solid 2px #ffffff;
 		}
 
 		table.alt {
@@ -2439,7 +2467,7 @@ input, select, textarea {
 		}
 
 			table.alt tbody tr td {
-				border: solid 2px #efefef;
+				border: solid 2px #ffffff;
 				border-left-width: 0;
 				border-top-width: 0;
 			}
@@ -2474,18 +2502,18 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		background-color: transparent;
-		border-radius: 0.35em;
-		border: solid 3px #efefef;
-		color: #787878 !important;
+		background-color: #ff3e03;
+		border-radius: 0.3em;
+		border: solid 2px #ffffff;
+		color: #ffffff !important;
 		cursor: pointer;
 		display: inline-block;
 		font-weight: 400;
 		height: 3.15em;
-		height: calc(2.75em + 6px);
-		line-height: 2.75em;
-		min-width: 10em;
-		padding: 0 1.5em;
+		height: calc(2em + 6px);
+		line-height: 2em;
+		min-width: 1em;
+		padding: 0 1em;
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
@@ -2495,8 +2523,8 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			border-color: #49bf9d;
-			color: #49bf9d !important;
+			border-color: #fffc52;
+			color: #fff947 !important;
 		}
 
 		input[type="submit"]:active,
@@ -2624,11 +2652,11 @@ input, select, textarea {
 		justify-content: space-between;
 		background-color: #1f1815;
 		background-attachment: scroll,								scroll;
-		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+		background-image: url("images/Orange-background.jpg"), url("../../images/bg.jpg");
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
 		background-size: auto,								150%;
-		color: rgba(255, 255, 255, 0.5);
+		color: rgba(255, 255, 255, 0.572);
 		height: 100%;
 		left: 0;
 		padding: 8em 4em;
@@ -2663,7 +2691,7 @@ input, select, textarea {
 		}
 
 		#header h1 {
-			color: rgba(255, 255, 255, 0.5);
+			color: rgb(255, 255, 255);
 			font-size: 1.35em;
 			line-height: 1.75em;
 			margin: 0;
@@ -2671,7 +2699,7 @@ input, select, textarea {
 
 		#header .image.avatar {
 			margin: 0 0 1em 0;
-			width: 6.25em;
+			width: 10.25em;
 		}
 
 /* Footer */
@@ -2681,7 +2709,7 @@ input, select, textarea {
 	}
 
 		#footer .icons a {
-			color: rgba(255, 255, 255, 0.4);
+			color: rgba(255, 255, 255, 0.705);
 		}
 
 	#footer .copyright {
@@ -2731,7 +2759,8 @@ input, select, textarea {
 				padding-top: 0;
 			}
 
-/* Poptrox */
+
+			/* Poptrox */
 
 	@-moz-keyframes spin {
 		0% {
@@ -3029,7 +3058,7 @@ input, select, textarea {
 
 			#header {
 				padding: 6em 3em 3em 3em;
-				width: 30%;
+				width: 25%;
 			}
 
 				#header h1 {
@@ -3109,7 +3138,7 @@ input, select, textarea {
 			#footer {
 				background-attachment: scroll;
 				background-color: #1f1815;
-				background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+				background-image: url("images/Orange-background.jpg"), url("../../images/bg.jpg");
 				background-position: top left,						bottom center;
 				background-repeat: repeat,							no-repeat;
 				background-size: auto,							cover;
@@ -3250,3 +3279,13 @@ input, select, textarea {
 			}
 
 	}
+
+		/* Styles spécifiques à Lightbox pour limiter la taille des images */
+		.lightbox-image {
+			max-width: 90vw !important; /* 90% de la largeur de l'écran */
+			max-height: 90vh !important; /* 90% de la hauteur de l'écran */
+			border-radius: 8px !important; /* Coins arrondis */
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important; /* Ombre */
+		}
+		
+		
