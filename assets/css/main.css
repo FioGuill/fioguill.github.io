@@ -244,14 +244,19 @@ input, select, textarea {
 		text-align: right;
 	}
 
-/* Container */
+/* Container text*/
 
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1em;
     grid-auto-rows: min-content;
-    grid-auto-flow: dense; /* Force les éléments à remplir les espaces libres */
+	
+	max-width: 800px; /* Limite la largeur du texte à 800 pixels */
+	margin: 0 auto; /* Centre le conteneur horizontalement */
+	column-count: 2; /* Divise le texte en deux colonnes */
+	column-width: 300px; /* Largeur minimale de chaque colonne */
+	column-gap: 20px; /* Espace de 20 pixels entre les colonnes */	
 }
 
 
